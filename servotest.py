@@ -25,14 +25,14 @@ p.start(2.5)# starting duty cycle ( it set the servo to 0 degree )
 
 try:
        while True:
-           for x in range(11):
+           for x in range(0,17,1):
              p.ChangeDutyCycle(control[x])
-             time.sleep(0.03)
+             time.sleep(1)
              print(x)
            
-           for x in range(9,0,-1):
+           for x in range(17,0,-1):
              p.ChangeDutyCycle(control[x])
-             time.sleep(0.03)
+             time.sleep(1)
              print(x)
            
 except KeyboardInterrupt:
